@@ -1,8 +1,18 @@
 import Express from 'express'
 import userRouter from './user'
 import reqRouter from './request'
+import cookieParser from 'cookie-parser'
+import bodyParser from 'body-parser'
+
 //创建应用
 const app = Express()
+
+//使用cookie-parser中间件，以cookieParser()函数调用
+app.use(cookieParser())
+
+//使用body-parser中间件，解析req.body
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 //设置路由
 app.get('/', (req, resp) => {
