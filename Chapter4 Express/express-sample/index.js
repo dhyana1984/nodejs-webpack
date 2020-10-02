@@ -1,6 +1,6 @@
 import Express from 'express'
 import userRouter from './user'
-
+import reqRouter from './request'
 //创建应用
 const app = Express()
 
@@ -57,6 +57,8 @@ app
 
 //使用从user.js导入的模块化路由，用app.use()
 app.use('/user', userRouter)
+
+app.use('/', reqRouter)
 
 //开启监听
 app.listen(8080, () => {
