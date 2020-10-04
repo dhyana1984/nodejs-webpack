@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Comment</title>
+  </head>
+  <body>
+    <form
+      action="/publish"
+      method="POST"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <fieldset>
+        <legend>Post Comment</legend>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div>
+          <label for="name">Content</label>
+          <textarea type="text" name="content"></textarea>
+        </div>
+        <div>
+            <button type="submit">Post</label>
+            <button type="reset">Reset</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
