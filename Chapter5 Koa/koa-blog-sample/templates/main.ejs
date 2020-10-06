@@ -1,0 +1,18 @@
+<!--主布局文件，根据登录状态显示不同的顶部导航-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+  </head>
+  <body>
+    <% if(logged){ %>
+    <a href="/">Home</a>
+    <a href="/publish">Post Article</a>
+    <a href="/logout">Logout</a>
+    <% } else{ %>
+    <a href="/login">Login</a>
+    <% } %> <%- body %>
+  </body>
+</html>
