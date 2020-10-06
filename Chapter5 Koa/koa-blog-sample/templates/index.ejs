@@ -1,0 +1,26 @@
+<h1>Article List</h1>
+<% if(list.length ===0) {%>
+<p>Not published yet</p>
+<%}else{%>
+    <table>
+    <tr>
+        <td>ID</td>
+        <th>Title</th>
+        <th>Publish Date</th>
+        <% if(logged){%>
+        <th>Action</th>
+        <%}%>
+    </tr>
+    <% list.forEach(post=>{%>
+        <td><%= post.id %></th>
+        <td><a href="/post/<%= post.id %>"><%= post.title %> </a></th>
+        <td><%= post.time %> </td>
+        <% if(logged) {%>
+            <th>
+                <a href="/update/<%= post.id %> ">Edit</a>
+                <a href="/delete/<%= post.id %> " onclick="return confirm('Do you confirm to DELETE?')">Delete</a>
+            </th> 
+        <% } %> 
+    <% }) %> 
+    </table>
+<% } %> 
