@@ -1,0 +1,32 @@
+<form
+  action="/update/<%= post.id %>"
+  method="POST"
+  enctype="application/x-www-form-urlencoded"
+>
+  <fieldset>
+    <legend>Edit Post</legend>
+    <div>
+      <label for="title">Title</label>
+      <input
+        type="text"
+        value="<%= post.title %> "
+        name="title"
+        id="title"
+        required
+      />
+    </div>
+    <div>
+      <label for="content">Content</label>
+      <textarea name="content" id="content" required>
+        <%= post.content %> 
+    </textarea
+      >
+    </div>
+    <div>
+      <div>
+        <button type="submit">Publish</button>
+        <button type="reset">Reset</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

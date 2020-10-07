@@ -9,7 +9,7 @@ router.get('/publish', async (ctx) => {
 })
 
 //发布处理
-router.post('./publish', async (ctx) => {
+router.post('/publish', async (ctx) => {
   //获取post的参数
   const data = ctx.request.body
   if (!data.title || !data.content) {
