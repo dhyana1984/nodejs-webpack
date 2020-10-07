@@ -1,0 +1,21 @@
+<form
+  action="/publish"
+  method="POST"
+  enctype="application/x-www-form-urlencoded"
+>
+  <fieldset>
+    <legend>Publish Post</legend>
+    <div>
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" required />
+    </div>
+    <div>
+      <label for="content">Content</label>
+      <textarea name="content" id="content" required></textarea>
+    </div>
+    <div>
+      <button type="submit">Publish</button>
+      <button type="reset">Reset</button>
+    </div>
+  </fieldset>
+</form>

@@ -1,4 +1,4 @@
-<h1>Article List</h1>
+<h1>Post List</h1>
 <% if(list.length ===0) {%>
 <p>Not published yet</p>
 <%}else{%>
@@ -12,6 +12,7 @@
         <%}%>
     </tr>
     <% list.forEach(post=>{%>
+        <tr>
         <td><%= post.id %></th>
         <td><a href="/post/<%= post.id %>"><%= post.title %> </a></th>
         <td><%= post.time %> </td>
@@ -21,6 +22,7 @@
                 <a href="/delete/<%= post.id %> " onclick="return confirm('Do you confirm to DELETE?')">Delete</a>
             </th> 
         <% } %> 
+    </tr>
     <% }) %> 
     </table>
 <% } %> 

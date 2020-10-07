@@ -10,7 +10,7 @@ router.get('/login', async (ctx) => {
 
 //登录处理
 router.post('/login', async (ctx) => {
-  const data = ctx.params.body
+  const data = ctx.request.body
   if (!data.username || !data.password) {
     ctx.throw(400, 'Your request is invailid')
   }
