@@ -38,12 +38,25 @@ User.init(
       type: DataTypes.CHAR(64),
       allowNull: false,
       comment: 'password'
+    },
+    status: {
+      type: DataTypes.TINYINT,
+      allowNull: false
     }
   },
   {
     sequelize,
     tableName: 'user',
-    modelName: 'user'
+    modelName: 'user',
+    //设置普通索引
+    indexes: [
+      {
+        name: 'idx_username_status',
+        //username和status的联合索引
+        fields: ['username', 'status'],
+        unique: false
+      }
+    ]
   }
 )
 
