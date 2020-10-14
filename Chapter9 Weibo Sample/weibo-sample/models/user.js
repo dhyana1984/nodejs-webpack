@@ -4,8 +4,8 @@ const security = require('../shared/security')
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     //检测密码，User的实例方法
-    checkPassword(rasPassword) {
-      return security.sha256(rasPassword) === this.password
+    checkPassword(rawPassword) {
+      return security.sha256(rawPassword) === this.password
     }
   }
 

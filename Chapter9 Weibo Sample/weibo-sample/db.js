@@ -2,7 +2,7 @@ const sequelize = require('./shared/sequelize')
 const { DataTypes } = require('sequelize')
 
 require('./models/comment')(sequelize, DataTypes)
-require('./models/comment')(sequelize, DataTypes)
+require('./models/user')(sequelize, DataTypes)
 require('./models/weibo')(sequelize, DataTypes)
 
 sequelize
