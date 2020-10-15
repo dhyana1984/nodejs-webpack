@@ -17,3 +17,5 @@ router.get('/', async (ctx) => {
     size
   })
 })
+
+module.exports = router

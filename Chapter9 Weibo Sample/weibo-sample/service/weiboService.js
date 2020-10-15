@@ -5,7 +5,7 @@ const Weibo = require('../models/weibo')(sequelize, DataTypes)
 const User = require('../models/user')(sequelize, DataTypes)
 
 //发布微博
-exports.puhlish = async (userId, content) => {
+exports.publish = async (userId, content) => {
   return Weibo.create({
     userId,
     type: PublishType.Self,
