@@ -1,0 +1,29 @@
+{
+  "name": "react-ts-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve",
+    "build": "webpack",
+    "build-ssr": "webpack --config webpack.ssr.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "ts-loader": "^8.0.6",
+    "typescript": "^4.0.3"
+  }
+}
