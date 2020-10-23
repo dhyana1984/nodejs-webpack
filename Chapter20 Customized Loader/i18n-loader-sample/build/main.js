@@ -1,0 +1,1 @@
+console.log("你好, 今天 is a 好 day");
