@@ -1,5 +1,5 @@
 {
-  "name": "customized-loader-sample",
+  "name": "customized-plugin-sample",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "loader-utils": "^2.0.0",
     "webpack": "^5.2.0",
     "webpack-cli": "^4.1.0"
   }
